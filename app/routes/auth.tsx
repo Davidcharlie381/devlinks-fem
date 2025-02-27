@@ -36,7 +36,6 @@ export default function AuthPage() {
     const password = formData.get("password") as string;
 
     const errors: FormFields = {
-      
       email: null,
       password: null
     };
@@ -54,7 +53,6 @@ export default function AuthPage() {
   
     if (errors.email || errors.password) {
       return setLoginFormError((prev) => ({
-        ...prev,
         email: errors.email,
         password: errors.password
       }));
@@ -72,6 +70,8 @@ export default function AuthPage() {
     const lastName = formData.get("lastName") as string;
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
+    // const emailSignup = formData.get("emailSignup") as string;
+    // const passwordSignup = formData.get("passwordSignup") as string;
 
     const errors: FormFields = {
       firstName: null,
@@ -152,6 +152,7 @@ export default function AuthPage() {
                       <Input
                         id="email"
                         type="email"
+                        name="email"
                         placeholder="Enter your email"
                         className="block bg-white focus:border-indigo-700 outline-none mb-1"
                         style={{
@@ -172,6 +173,7 @@ export default function AuthPage() {
                       <Input
                         id="password"
                         type="password"
+                        name="password"
                         placeholder="Enter your password"
                         className="block bg-white focus:border-indigo-700 outline-none mb-1"
                         style={{
@@ -209,6 +211,7 @@ export default function AuthPage() {
                       <Input
                         id="firstName"
                         type="text"
+                        name="firstName"
                         placeholder="Enter your first name"
                         className="block bg-white focus:border-indigo-700 outline-none mb-1"
                         style={{
@@ -231,6 +234,7 @@ export default function AuthPage() {
                       <Input
                         id="lastName"
                         type="text"
+                        name="lastName"
                         placeholder="Enter your last name"
                         className="block bg-white focus:border-indigo-700 outline-none mb-1"
                         style={{
@@ -253,6 +257,7 @@ export default function AuthPage() {
                       <Input
                         id="email-signup"
                         type="email"
+                        name="email"
                         placeholder="Enter your email"
                         className="block bg-white focus:border-indigo-700 outline-none mb-1"
                         style={{
@@ -273,6 +278,7 @@ export default function AuthPage() {
                       <Input
                         id="password-signup"
                         type="password"
+                        name="password"
                         placeholder="Create a password"
                         className="block bg-white focus:border-indigo-700 outline-none mb-1"
                         style={{
